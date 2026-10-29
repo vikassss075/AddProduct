@@ -1,8 +1,7 @@
-const services = require('../services/productServices');
-
 const fetchProduct = (req,res)=>{
-    const result = services.allProducts();
-    res.sendFile(result);
+    const data = req.body;
+
+    res.json({value : data.productName});
 }
 
 module.exports ={
